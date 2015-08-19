@@ -1,8 +1,9 @@
 ## Programming Assignment 2
-## Cached matrix inverse
+
+## The first function, makeCacheMatrix, creates a special "matrix" and sets/gets matrix, sets/gets matrix inverse:
 
 
-makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(x = matrix()) { 
 
     matinverse <- NULL
     set <- function(y) {
@@ -22,7 +23,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## The second function calculates the inverse of the special "matrix" created with the previous function. 
+## It first checks to see if the inverse has already been calculated. If so, it gets the inverse from the cache and 
+## skips the computation. Otherwise, it calculates the inverse of the data and sets the value of the inverse in the cache
+## via the setinverse function. Using "solve" to find matrix inverse.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
